@@ -85,11 +85,24 @@
     indicators: false,
     height: 500,
     transition: 500,
-    interval: 6000
+    interval: 4000
   };
   $('.slider').slider(options);
-  $(".dropdown-button").dropdown();
+  $('.dropdown-button').dropdown();
   $('.button-collapse').sideNav();
-
+  
+  if ($('#pdf').length > 0) {
+    var navHeight = document.getElementsByClassName("nav-wrapper")[0].offsetHeight;
+    var footerHeight = document.getElementsByClassName("page-footer")[0].offsetHeight;
+    var height = $(window).height() - navHeight - footerHeight - 6;
+    document.getElementById('pdf').style.height = height+'px';
+  }
+  
+  if ($('#100').length > 0) {
+    var navHeight = document.getElementsByClassName("nav-wrapper")[0].offsetHeight;
+    var footerHeight = document.getElementsByClassName("page-footer")[0].offsetHeight;
+    var height = $(window).height() - navHeight - footerHeight;
+    document.getElementById('100').style.height = height+'px';
+  }
   </script>
 </html>
