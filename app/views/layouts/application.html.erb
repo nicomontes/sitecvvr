@@ -103,10 +103,17 @@
     var footerHeight = document.getElementsByClassName("page-footer")[0].offsetHeight;
     var height = $(window).height() - navHeight - footerHeight;
     if (document.getElementById('100').offsetHeight < $(window).height() - navHeight - footerHeight) {
-      console.log(document.getElementById('100').offsetHeight);
-      console.log($(window).height() - navHeight - footerHeight);
       document.getElementById('100').style.height = height+'px';
     }
+  }
+  
+  if ($('#facebook').length > 0) {
+    var style = window.getComputedStyle(document.getElementById("div_facebook"), null);
+    paddingRightDiv = style.paddingRight.match(/[0-9\.]*/)[0];
+    paddingLeftDiv = style.paddingLeft.match(/[0-9\.]*/)[0];
+    halfWidthDiv = ($('#div_facebook')[0].offsetWidth - paddingRightDiv - paddingLeftDiv) / 2;
+    halfWidthFacebook = $('#facebook')[0].offsetWidth / 2;
+    $('#facebook')[0].style.marginLeft = halfWidthDiv - halfWidthFacebook + 'px';
   }
   </script>
 </html>
