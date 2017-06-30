@@ -102,7 +102,11 @@
     var navHeight = document.getElementsByClassName("nav-wrapper")[0].offsetHeight;
     var footerHeight = document.getElementsByClassName("page-footer")[0].offsetHeight;
     var height = $(window).height() - navHeight - footerHeight;
-    document.getElementById('100').style.height = height+'px';
+    if (document.getElementById('100').offsetHeight < $(window).height() - navHeight - footerHeight) {
+      console.log(document.getElementById('100').offsetHeight);
+      console.log($(window).height() - navHeight - footerHeight);
+      document.getElementById('100').style.height = height+'px';
+    }
   }
   </script>
 </html>
