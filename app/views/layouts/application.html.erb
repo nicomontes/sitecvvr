@@ -17,38 +17,41 @@
         <a id="logo-container" class="icon hide-on-med-and-down" href="#"><%= image_tag("CVVR_Logo_Simple.svg", style: "height: 100%") %></a>
         <a id="logo-container" href="/" class="brand-logo flow-text">CVVR</a>
         <ul class="right hide-on-med-and-down">
-          <li><a class="dropdown-button" data-activates="dropdown1">Le Planeur</a></li>
-          <li><a class="dropdown-button" data-activates="dropdown2">Le Club</a></li>
-          <li><a href="/static_pages/preparation">Préparation des vols</a></li>
-          <li><a href="/static_pages/utils">Liens utiles</a></li>
+          <li><a class="flow-text dropdown-button" data-activates="dropdown1">Le Planeur</a></li>
+          <li><a class="flow-text dropdown-button" data-activates="dropdown2">Le Club</a></li>
+          <li><a class="flow-text" href="/static_pages/preparation">Préparation des vols</a></li>
+          <li><a class="flow-text" href="/static_pages/utils">Liens utiles</a></li>
         </ul>
         
         <ul id="nav-mobile" class="side-nav">
           <li>
-            <a style="color: rgba(0, 0, 0, 0.87); pointer-events: none; cursor: default;">Le Planeur</a>
+            <dd style="margin-left: 20px"><a class="flow-text center" style="color: rgba(0, 0, 0, 0.87); pointer-events: none; cursor: default;">Le Planeur</a>
           </li>
           <li>
             <ul>
-              <li><dd><a href="/static_pages/learn" style="color: #607d8b">Apprendre</a></li>
-              <li><dd><a href="/static_pages/baptism" style="color: #607d8b">Baptèmes</a></li>
-              <li><dd><a href="/static_pages/training" style="color: #607d8b">Stages</a></li>
+              <li><dd><a class="flow-text" href="/static_pages/learn" style="color: #607d8b">Apprendre</a></li>
+              <li><dd><a class="flow-text" href="/static_pages/baptism" style="color: #607d8b">Baptèmes</a></li>
+              <li><dd><a class="flow-text" href="/static_pages/training" style="color: #607d8b">Stages</a></li>
             </ul>
           </li>
           <li>
-            <a style="color: rgba(0, 0, 0, 0.87); pointer-events: none; cursor: default;">Le Club</a>
+            <dd style="margin-left: 20px"><a class="flow-text center" style="color: rgba(0, 0, 0, 0.87); pointer-events: none; cursor: default;">Le Club</a>
           </li>
           <li>
             <ul>
-              <li><dd><a href="/static_pages/gliders" style="color: #607d8b">Nos planeurs</a></li>
-              <li><dd><a href="/static_pages/prices" style="color: #607d8b">Tarif</a></li>
-              <li><dd><a href="/static_pages/photos" style="color: #607d8b">Photos et Vidéos</a></li>
-              <li><dd><a href="/static_pages/foreigners" style="color: #607d8b">Foreigners</a></li>
+              <li><dd><a class="flow-text" href="/static_pages/gliders" style="color: #607d8b">Nos planeurs</a></li>
+              <li><dd><a class="flow-text" href="/static_pages/prices" style="color: #607d8b">Tarif</a></li>
+              <li><dd><a class="flow-text" href="/static_pages/photos" style="color: #607d8b">Photos et Vidéos</a></li>
+              <li><dd><a class="flow-text" href="/static_pages/foreigners" style="color: #607d8b">Foreigners</a></li>
             </ul>
           </li>
           <li>
+            <br/>
+          </li>
+          <li>
             <ul>
-              <li><a href="/static_pages/preparation" style="color: #607d8b">Préparation des vols</a></li>
-              <li><a href="/static_pages/utils" style="color: #607d8b">Liens utiles</a></li>
+              <li><dd style="margin-left: 20px"><a class="flow-text" href="/static_pages/preparation" style="color: #607d8b">Préparation des vols</a></li>
+              <li><dd style="margin-left: 20px"><a class="flow-text" href="/static_pages/utils" style="color: #607d8b">Liens utiles</a></li>
             </ul>
           </li>
         </ul>
@@ -57,16 +60,16 @@
     </nav>
 
     <ul id="dropdown1" class="dropdown-content" style="width: initial">
-      <li><a href="/static_pages/learn" style="color: #607d8b">Apprendre</a></li>
-      <li><a href="/static_pages/baptism" style="color: #607d8b">Baptèmes</a></li>
-      <li><a href="/static_pages/training" style="color: #607d8b">Stages</a></li>
+      <li><a class="flow-text" href="/static_pages/learn" style="color: #607d8b">Apprendre</a></li>
+      <li><a class="flow-text" href="/static_pages/baptism" style="color: #607d8b">Baptèmes</a></li>
+      <li><a class="flow-text" href="/static_pages/training" style="color: #607d8b">Stages</a></li>
     </ul>
 
     <ul id="dropdown2" class="dropdown-content" style="width: initial">
-      <li><a href="/static_pages/gliders" style="color: #607d8b">Nos planeurs</a></li>
-      <li><a href="/static_pages/prices" style="color: #607d8b">Tarif</a></li>
-      <li><a href="/static_pages/photos" style="color: #607d8b">Photos et Vidéos</a></li>
-      <li><a href="/static_pages/foreigners" style="color: #607d8b">Foreigners</a></li>
+      <li><a class="flow-text" href="/static_pages/gliders" style="color: #607d8b">Nos planeurs</a></li>
+      <li><a class="flow-text" href="/static_pages/prices" style="color: #607d8b">Tarif</a></li>
+      <li><a class="flow-text" href="/static_pages/photos" style="color: #607d8b">Photos et Vidéos</a></li>
+      <li><a class="flow-text" href="/static_pages/foreigners" style="color: #607d8b">Foreigners</a></li>
     </ul>
     <%= yield %>
     <footer class="page-footer blue-grey" style="padding-top: 0px;">
