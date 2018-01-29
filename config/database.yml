@@ -39,5 +39,5 @@ production:
   encoding: utf8
   database: siteCVVR_production
   pool: 5
-  username: siteCVVR
-  password:
+  username: ENV["DATABASE_USER"]
+  password: ENV["DATABASE_PASSWORD"]
