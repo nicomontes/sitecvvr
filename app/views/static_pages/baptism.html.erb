@@ -12,15 +12,32 @@
           Venez vous essayer au planeur ! <br/>
           Pour offrir ou bien pour vous même, nous vous proposons une formule à 80€.
         </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-      <div class="row">
         <p class="flow-text light">
           Au programme, visite de la région roannaise avec un point de vue inédit, sensations garanties dès le décollage avec le départ au treuil, tout cela au cours d'un vol d'une vingtaine de minutes, dans un calme et un silence envoûtants !
+        </p>
+        <p>
+          <%= form_tag charges_path, :id => 'formVD' do %>
+            <article>
+              <% if flash[:error].present? %>
+                <div id="error_explanation">
+                  <p><%= flash[:error] %></p>
+                </div>
+              <% end %>
+            </article>
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                    data-description="Vol Découverte"
+                    data-amount="8000"
+                    data-locale="auto"
+                    data-shippingAddress="true"
+                    data-label="Acheter"
+                    data-currency="eur"></script>
+          <% end %>
+          <script>
+            var newdiv = document.createElement('div');
+            newdiv.innerHTML = "<input id='sku' name='sku' type='hidden' value='sku_C9HFhroLn8kXUG'>";
+            document.getElementById('formVD').appendChild(newdiv);
+          </script>
         </p>
       </div>
     </div>
@@ -37,28 +54,60 @@
         <p class="flow-text light">
           Pour offrir ou bien pour vous même, nous vous proposons une formule à 140€, sur rendez-vous seulement.
         </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-      <div class="row">
         <p class="flow-text light">
-          Au programme, après un briefing et présentation du programme au sol, nous décollerons à l'aide de l'avion remorqueur jusqu’à une altitude de 1100 mètres sol, une fois prêt, début des évolutions, à vous les boucles, tonneaux, vol dos et autres arabesques.       </p>
-      </div>
-    </div>
-  </div>
-
-  <div id="index-banner" class="parallax-container">
-    <div class="parallax"> <%= image_tag("dos.jpg" , :style => 'height : 1800px') %> </div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-      <div class="row">
+          Au programme, après un briefing et présentation du programme au sol, nous décollerons à l'aide de l'avion remorqueur jusqu’à une altitude de 1100 mètres sol, une fois prêt, début des évolutions, à vous les boucles, tonneaux, vol dos et autres arabesques.       
+        </p>
         <p class="flow-text light">
           Vol d'une durée d'environ 20 minutes, remorquage inclus.
+        </p>
+        <p>
+          <%= form_tag charges_path, :id => 'formVsV' do %>
+            <article>
+              <% if flash[:error].present? %>
+                <div id="error_explanation">
+                  <p><%= flash[:error] %></p>
+                </div>
+              <% end %>
+            </article>
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                    data-description="Vol Voltige sans vidéo"
+                    data-amount="15000"
+                    data-locale="auto"
+                    data-shippingAddress="true"
+                    data-label="Acheter sans vidéo"
+                    data-currency="eur"></script>
+          <% end %>
+          <script>
+            var newdiv = document.createElement('div');
+            newdiv.innerHTML = "<input id='sku' name='sku' type='hidden' value='sku_C9HH44O1c5V9zg'>";
+            document.getElementById('formVsV').appendChild(newdiv);
+          </script>
+          <br/>
+          <%= form_tag charges_path, :id => 'formVaV' do %>
+            <article>
+              <% if flash[:error].present? %>
+                <div id="error_explanation">
+                  <p><%= flash[:error] %></p>
+                </div>
+              <% end %>
+            </article>
+            <input id="sku" name="sku" type="hidden" value="sku_CEXakvuRfkANOk">
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                    data-description="Vol Voltige avec vidéo"
+                    data-amount="17500"
+                    data-locale="auto"
+                    data-shippingAddress="true"
+                    data-label="Acheter avec vidéo"
+                    data-currency="eur"></script>
+          <% end %>
+          <script>
+            var newdiv = document.createElement('div');
+            newdiv.innerHTML = "<input id='sku' name='sku' type='hidden' value='sku_CEY85nZMAKSm22'>";
+            document.getElementById('formVaV').appendChild(newdiv);
+          </script>
+        </p>
       </div>
     </div>
   </div>
