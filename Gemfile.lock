@@ -94,6 +94,9 @@ GEM
     nio4r (2.2.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
+    passenger (5.2.0)
+      rack
+      rake (>= 0.8.1)
     pg (0.21.0)
     public_suffix (3.0.1)
     puma (3.11.2)
@@ -194,6 +197,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   materialize-sass
+  passenger (>= 5.0.25)
   pg (~> 0.20)
   puma (~> 3.7)
   pure-css-rails
