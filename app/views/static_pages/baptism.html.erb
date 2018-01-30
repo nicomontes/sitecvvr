@@ -16,7 +16,7 @@
           Au programme, visite de la région roannaise avec un point de vue inédit, sensations garanties dès le décollage avec le départ au treuil, tout cela au cours d'un vol d'une vingtaine de minutes, dans un calme et un silence envoûtants !
         </p>
         <p>
-          <%= form_tag charges_path, :id => 'formVD' do %>
+          <%= form_tag('/charges'), :id => 'formVD' do %>
             <article>
               <% if flash[:error].present? %>
                 <div id="error_explanation">
@@ -61,7 +61,7 @@
           Vol d'une durée d'environ 20 minutes, remorquage inclus.
         </p>
         <p>
-          <%= form_tag charges_path, :id => 'formVsV' do %>
+          <%= form_tag('/charges'), :id => 'formVsV' do %>
             <article>
               <% if flash[:error].present? %>
                 <div id="error_explanation">
@@ -84,7 +84,7 @@
             document.getElementById('formVsV').appendChild(newdiv);
           </script>
           <br/>
-          <%= form_tag charges_path, :id => 'formVaV' do %>
+          <%= form_tag('/charges'), :id => 'formVaV' do %>
             <article>
               <% if flash[:error].present? %>
                 <div id="error_explanation">
