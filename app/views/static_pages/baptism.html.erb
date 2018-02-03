@@ -1,13 +1,27 @@
 <div id="100">
 
-  <div id="index-banner" class="parallax-container">
-    <div class="parallax"> <%= image_tag("regard_haut.jpg", :style => 'height : 800px') %> </div>
-  </div>
+    <div id="index-banner" class="parallax-container">
+      <div class="parallax"> <%= image_tag("VI2.png") %> </div>
+    </div>
 
   <div class="container">
     <div class="section">
       <div class="row">
         <h5 class="center">La formule "Découverte"</h5>
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <%= image_tag("regard_haut.jpg") %>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <%= image_tag("poupie.jpg") %>
+            </div>
+          </div>
+        </div>
         <p class="flow-text light">
           Venez vous essayer au planeur ! <br/>
           Pour offrir ou bien pour vous même, nous vous proposons une formule à 80€.
@@ -30,7 +44,7 @@
                     data-amount="8000"
                     data-locale="auto"
                     data-shippingAddress="true"
-                    data-label="Commander un vol découverte"
+                    data-label="Commander un vol découverte à 80€"
                     data-currency="eur"></script>
           <% end %>
           <script>
@@ -46,6 +60,7 @@
   <div class="container">
     <div class="section">
       <div class="row">
+        <h5 class="center">La formule "Voltige"</h5>
         <div class="col s12 m6">
           <div class="card">
             <div class="card-image">
@@ -63,7 +78,7 @@
         <div class="col s12 m6">
           <div class="card">
             <div class="card-image">
-              <%= image_tag("verriere.jpg") %>
+              <%= image_tag("defaut_voltige.jpg") %>
             </div>
           </div>
         </div>
@@ -74,15 +89,14 @@
   <div class="container">
     <div class="section">
       <div class="row">
-        <h5 class="center">La formule "Voltige"</h5>
         <p class="flow-text light">
           Pour offrir ou bien pour vous même, nous vous proposons une formule à 150€ et 175€ avec vidéo, sur rendez-vous seulement.
         </p>
         <p class="flow-text light">
-          Au programme, après un briefing et présentation du programme au sol, nous décollerons à l'aide de l'avion remorqueur jusqu’à une altitude de 1100 mètres sol, une fois prêt, début des évolutions, à vous les boucles, tonneaux, vol dos et autres arabesques.       
+          Au programme, après un briefing et présentation du programme au sol, nous décollerons à l'aide de l'avion remorqueur jusqu’à une altitude de <span class="blue-text text-darken-2">1100 mètres</span> sol, une fois prêt, début des évolutions, à vous les boucles, tonneaux, vol dos et autres arabesques.       
         </p>
         <p class="flow-text light">
-          Vol d'une durée d'environ 20 minutes, remorquage inclus.
+          Vol d'une durée d'environ <span class="blue-text text-darken-2">20 minutes</span>, remorquage inclus.
         </p>
         <p>
           <%= form_tag('/charges', :id => 'formVsV') do %>
@@ -99,7 +113,7 @@
                     data-amount="15000"
                     data-locale="auto"
                     data-shippingAddress="true"
-                    data-label="Commander un baptème voltige sans vidéo"
+                    data-label="Commander un baptème voltige sans vidéo à 150€"
                     data-currency="eur"></script>
           <% end %>
           <script>
@@ -123,7 +137,7 @@
                     data-amount="17500"
                     data-locale="auto"
                     data-shippingAddress="true"
-                    data-label="Commander un baptème voltige avec vidéo"
+                    data-label="Commander un baptème voltige avec vidéo à 175€"
                     data-currency="eur"></script>
           <% end %>
           <script>
