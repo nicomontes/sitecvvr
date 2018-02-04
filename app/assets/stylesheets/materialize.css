@@ -5940,15 +5940,17 @@ button.btn-floating {
   position: fixed;
   display: none;
   color: #fff;
-  line-height: 50px;
+  line-height: 30px;
   bottom: 0;
   left: 0;
   width: 100%;
   text-align: center;
   padding: 0% 15%;
-  height: 50px;
+  height: 150px;
   z-index: 1000;
   -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  font-size: 25px;
 }
 
 select:focus {
