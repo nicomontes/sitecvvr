@@ -15,13 +15,13 @@
     <nav class="white" role="navigation">
       <div class="nav-wrapper">
         <a id="logo-container" class="icon hide-on-med-and-down" href="#"><%= image_tag("CVVR_Logo_Simple.svg", style: "height: 100%") %></a>
-        <a id="logo-container" href="/" class="brand-logo flow-text blue-grey-text">CVVR</a>
-        <a href="#" data-activates="nav-mobile" class="button-collapse blue-grey-text"><i class="material-icons">menu</i></a>
+        <a id="logo-container" href="/" class="brand-logo flow-text blue-grey-text" style="font-weight: 300 !important">CVVR</a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse blue-grey-text" style="font-weight: 300 !important"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a class="flow-text dropdown-button blue-grey-text" data-activates="dropdown1">Le Planeur<i class="material-icons right">arrow_drop_down</i></a></li>
-          <li><a class="flow-text dropdown-button blue-grey-text" data-activates="dropdown2">Le Club<i class="material-icons right">arrow_drop_down</i></a></li>
-          <li><a class="flow-text blue-grey-text" href="/static_pages/preparation">Préparation des vols</a></li>
-          <li><a class="flow-text blue-grey-text" href="/static_pages/utils">Liens utiles</a></li>
+          <li><a class="flow-text dropdown-button dropdown-button2 blue-grey-text" data-beloworigin="true" data-activates="dropdown1" style="font-weight: 300 !important">Le Planeur<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a class="flow-text dropdown-button blue-grey-text" data-beloworigin="true" data-constrainWidth="false" data-activates="dropdown2" style="font-weight: 300 !important">Le Club<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a class="flow-text blue-grey-text" href="/static_pages/preparation" style="font-weight: 300 !important">Préparation des vols</a></li>
+          <li><a class="flow-text blue-grey-text" href="/static_pages/utils" style="font-weight: 300 !important">Liens utiles</a></li>
         </ul>
         
         <ul id="nav-mobile" class="side-nav">
@@ -30,9 +30,9 @@
           </li>
           <li>
             <ul>
-              <li><dd><a class="flow-text blue-grey-text" href="/static_pages/learn">Apprendre</a></li>
-              <li><dd><a class="flow-text blue-grey-text" href="/static_pages/baptism">Baptèmes</a></li>
-              <li><dd><a class="flow-text blue-grey-text" href="/static_pages/training">Stages</a></li>
+              <li><dd><a class="flow-text blue-grey-text" href="/static_pages/learn" style="font-weight: 300 !important">Apprendre</a></li>
+              <li><dd><a class="flow-text blue-grey-text" href="/static_pages/baptism" style="font-weight: 300 !important">Baptèmes</a></li>
+              <li><dd><a class="flow-text blue-grey-text" href="/static_pages/training" style="font-weight: 300 !important">Stages</a></li>
             </ul>
           </li>
           <li>
@@ -86,12 +86,13 @@
   $('.parallax').parallax();
   var options = {
     indicators: false,
-    height: 500,
+    height: 300,
     transition: 500,
     interval: 4000
   };
   $('.slider').slider(options);
-  $('.dropdown-button').dropdown({ belowOrigin: true });
+  $('.dropdown-button').dropdown({ belowOrigin: true, constrainWidth : false });
+  $('.dropdown-button2').dropdown({ belowOrigin: true });
   $('.button-collapse').sideNav();
   
   if ($('#pdf').length > 0) {

@@ -2762,7 +2762,7 @@ video.responsive-video {
 .parallax-container {
   position: relative;
   overflow: hidden;
-  height: 400px;
+  height: 300px;
 }
 
 .parallax-container .parallax {
@@ -5472,7 +5472,7 @@ button.btn-floating {
 }
 
 .dropdown-content li > a, .dropdown-content li > span {
-  font-size: 16px;
+  /*font-size: 16px;*/
   color: #26a69a;
   display: block;
   line-height: 22px;
@@ -8091,7 +8091,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .slider {
   position: relative;
-  height: 400px !important;
+  height: 300px !important;
   width: 100%;
 }
 
@@ -8117,7 +8117,7 @@ input[type=range]:focus::-ms-fill-upper {
 .slider .slides {
   background-color: #9e9e9e;
   margin: 0;
-  height: 400px !important;
+  height: 300px !important;
 }
 
 .slider .slides li {
