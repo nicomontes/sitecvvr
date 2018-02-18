@@ -46,10 +46,9 @@ class ChargesController < ApplicationController
   )
 
   rescue Stripe::CardError => e
-    flash[:error] = e.message
-    render 'static_pages/baptism'
+    format.html { render 'static_pages/baptism', notice: "Il y a eu un problème avec votre payement," }
   end
   
-  render 'static_pages/baptism'
+  format.html { render 'static_pages/baptism', notice: "Le Payement à bien été prit en compte.\n Au plaisir de vous voir" }
   
 end

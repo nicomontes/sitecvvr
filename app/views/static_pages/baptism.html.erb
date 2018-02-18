@@ -153,3 +153,9 @@
   </div>
 
 </div>
+
+<script>
+  <% if notice %>
+    Materialize.toast('<%= notice %>', 4000) // 4000 is the duration of the toast
+  <% end %>
+</script>
