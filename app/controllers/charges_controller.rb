@@ -46,9 +46,9 @@ class ChargesController < ApplicationController
   )
 
   rescue Stripe::CardError => e
-    format.html { render 'static_pages/baptism', notice: "Il y a eu un problème avec votre payement," }
+    render 'static_pages/baptism', :locals => {:notice => "Il y a eu un problème avec votre payement"}
   end
   
-  format.html { render 'static_pages/baptism', notice: "Le Payement à bien été prit en compte. Au plaisir de vous voir" }
+  render 'static_pages/baptism', :locals => {:notice => "Le Payement à bien été prit en compte. Au plaisir de vous voir"}
   
 end
