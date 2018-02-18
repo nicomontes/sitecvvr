@@ -49,6 +49,6 @@ class ChargesController < ApplicationController
     format.html { render 'static_pages/baptism', notice: "Il y a eu un problème avec votre payement," }
   end
   
-  format.html { render 'static_pages/baptism', notice: "Le Payement à bien été prit en compte.\n Au plaisir de vous voir" }
+  format.html { render 'static_pages/baptism', notice: "Le Payement à bien été prit en compte. Au plaisir de vous voir" }
   
 end
