@@ -5,11 +5,11 @@ class ChargesController < ApplicationController
 
   def create
 
-  if params[:sku] === "sku_CEWHSbas8QmDDi"
+  if params[:sku] === "sku_C9HFhroLn8kXUG"
     @amount = 8000
-  elsif params[:sku] === "sku_CEXZDn5tuUF1H4"
+  elsif params[:sku] === "sku_C9HH44O1c5V9zg"
     @amount = 15000
-  elsif params[:sku] === "sku_CEXakvuRfkANOk"
+  elsif params[:sku] === "sku_CEY85nZMAKSm22"
     @amount = 17500
   end
     
