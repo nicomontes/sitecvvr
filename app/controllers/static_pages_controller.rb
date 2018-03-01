@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
   def notam
     #render '/Notam.pdf'
     # Open browser and go to trainline website
+    system('export DISPLAY=:0')
     $browser = Watir::Browser.new :chrome
     $browser.goto "http://notamweb.aviation-civile.gouv.fr/Script/IHM/Bul_Aerodrome.php"
     $browser.text_field(:name => 'AERO_Duree').set "24"
