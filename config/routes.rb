@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'static_pages/utils'
+  get 'static_pages/notam'
 
   get 'static_pages/preparation'
 
