@@ -1,53 +1,20 @@
 <div id="100">
   
   <div class="container">
-    <div id="index-banner" class="slider" onclick="$('.slider').slider('next');">
-      <ul class="slides">
-        <% for image in Dir.glob("app/assets/images/TL7/*") %>
-          <li>
-            <div class="caption left-align">
-              <h3>TL7</h3>
-            </div>
-            <div class="parallax-container" style="height: 500px;">
-              <div class="parallax"> <%= image_tag(/TL7\/[a-zA-Z0-9\.\_]*$/.match(image), :style => 'height : 800px') %> </div>
-            </div>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+    <div class="row">
+      <div id='1' class="col s4" style='padding-right: 0.2rem; padding-left: 0.2rem;'>
+      </div>
+      <div id='2' class="col s4" style='padding-right: 0.2rem; padding-left: 0.2rem;'>
+      </div>
+      <div id='3' class="col s4" style='padding-right: 0.2rem; padding-left: 0.2rem;'>
+      </div>
 
-  <br/>
+      <% for image in Dir.glob("app/assets/images/Photos/*") %>
+        <div id='r' class="col s4">
+          <%= image_tag(/Photos\/[a-zA-Z0-9\.\_]*$/.match(image), :style => 'width : 100%; padding-top: 0.2rem; padding-bottom: 0.2rem;', :class => 'img materialboxed') %>
+        </div>
+      <% end %>
 
-    <div id="index-banner" class="slider" onclick="$('.slider').slider('next');">
-      <ul class="slides">
-        <% for image in Dir.glob("app/assets/images/JourLePlusLong/*") %>
-          <li>
-            <div class="caption left-align">
-              <h3>Jour le plus long</h3>
-            </div>
-            <div class="parallax-container" style="height: 500px;">
-              <div class="parallax"> <%= image_tag(/JourLePlusLong\/[a-zA-Z0-9\.\_]*$/.match(image), :style => 'height : 800px') %> </div>
-            </div>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-
-  <br/>
-
-    <div id="index-banner" class="slider" onclick="$('.slider').slider('next');">
-      <ul class="slides">
-        <% for image in Dir.glob("app/assets/images/Onde/*") %>
-          <li>
-            <div class="caption left-align">
-              <h3>Vol d'onde</h3>
-            </div>
-            <div class="parallax-container" style="height: 500px;">
-              <div class="parallax"> <%= image_tag(/Onde\/[a-zA-Z0-9\.\_]*$/.match(image), :style => 'height : 800px') %> </div>
-            </div>
-          </li>
-        <% end %>
-      </ul>
     </div>
   </div>
 
@@ -64,3 +31,23 @@
   </div>
 
 </div>
+
+<script>
+  var images = document.getElementsByClassName('img');
+  for(var i = 0; i < images.length; i++) {
+    console.log(i)
+    console.log(document.getElementById('1').clientHeight);
+    if (document.getElementById('2').clientHeight < document.getElementById('1').clientHeight && document.getElementById('2').clientHeight < document.getElementById('3').clientHeight) {
+      document.getElementById('2').appendChild(images[i]);
+    }
+    else if (document.getElementById('3').clientHeight < document.getElementById('1').clientHeight && document.getElementById('3').clientHeight < document.getElementById('1').clientHeight) {
+      document.getElementById('3').appendChild(images[i]);
+    }
+    else {
+      document.getElementById('1').appendChild(images[i]);
+    }
+  }
+  for(var i = 0; i < document.getElementById('r').length; i++) {
+    document.getElementById('r')[i].parentNode.removeChild(element);
+  }
+</script>
