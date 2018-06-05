@@ -1,26 +1,7 @@
 <div id="100">
   
   <div class="container">
-    <div class="row">
-      <div id='1' class="col s4" style='padding-right: 0.2rem; padding-left: 0.2rem;'>
-      </div>
-      <div id='2' class="col s4" style='padding-right: 0.2rem; padding-left: 0.2rem;'>
-      </div>
-      <div id='3' class="col s4" style='padding-right: 0.2rem; padding-left: 0.2rem;'>
-      </div>
-
-      <% for image in Dir.glob("app/assets/images/Photos/*") %>
-        <div id='r' class="col s4">
-          <%= image_tag(/Photos\/[a-zA-Z0-9\.\_]*$/.match(image), :style => 'width : 100%; padding-top: 0.2rem; padding-bottom: 0.2rem;', :class => 'img materialboxed') %>
-        </div>
-      <% end %>
-
-    </div>
-  </div>
-
-  <br/>
-
-  <div class="container">
+    
     <div class="video-container">
       <iframe src="//www.youtube.com/embed/krrDfmccRsk?rel=0" frameborder="0" allowfullscreen></iframe>
     </div>
@@ -28,26 +9,52 @@
     <div class="video-container">
       <iframe src="//www.youtube.com/embed/KyG72xSiGxg?rel=0" frameborder="0" allowfullscreen></iframe>
     </div>
+    
+  </div>
+  
+  <br/>
+  
+  <div class="container">
+    <div class="row">
+      
+      <div id='1' class="col s4" style='padding-right: 0.2rem; padding-left: 0.2rem;'>
+      </div>
+      <div id='2' class="col s4" style='padding-right: 0.2rem; padding-left: 0.2rem;'>
+      </div>
+      <div id='3' class="col s4" style='padding-right: 0.2rem; padding-left: 0.2rem;'>
+      </div>
+      <div id="r">
+        <% for image in Dir.glob("app/assets/images/Photos/*") %>
+          <div class="col s4">
+            <%= image_tag(/Photos\/[a-zA-Z0-9\.\_]*$/.match(image), :style => 'width : 100%; padding-top: 0.2rem; padding-bottom: 0.2rem;', :class => 'img materialboxed') %>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
   </div>
 
 </div>
 
 <script>
+
   var images = document.getElementsByClassName('img');
   for(var i = 0; i < images.length; i++) {
-    console.log(i)
-    console.log(document.getElementById('1').clientHeight);
-    if (document.getElementById('2').clientHeight < document.getElementById('1').clientHeight && document.getElementById('2').clientHeight < document.getElementById('3').clientHeight) {
-      document.getElementById('2').appendChild(images[i]);
-    }
-    else if (document.getElementById('3').clientHeight < document.getElementById('1').clientHeight && document.getElementById('3').clientHeight < document.getElementById('1').clientHeight) {
-      document.getElementById('3').appendChild(images[i]);
-    }
-    else {
-      document.getElementById('1').appendChild(images[i]);
-    }
+    images[i].onload = load_image(images[i]);
   }
-  for(var i = 0; i < document.getElementById('r').length; i++) {
-    document.getElementById('r')[i].parentNode.removeChild(element);
-  }
+  
+  function load_image(image) {
+      if (document.getElementById('2').clientHeight < document.getElementById('1').clientHeight && document.getElementById('2').clientHeight < document.getElementById('3').clientHeight) {
+        document.getElementById('2').appendChild(image);
+      }
+      else if (document.getElementById('3').clientHeight < document.getElementById('1').clientHeight && document.getElementById('3').clientHeight < document.getElementById('1').clientHeight) {
+        document.getElementById('3').appendChild(image);
+      }
+      else {
+        document.getElementById('1').appendChild(image);
+      }
+    }
+    window.onload = function () {
+      document.getElementById('r').remove();
+    }
 </script>
