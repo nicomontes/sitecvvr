@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Site CVVR</title>
+    <%= analytics_init if GoogleAnalytics.valid_tracker? %>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
