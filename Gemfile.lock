@@ -114,7 +114,8 @@ GEM
       rake (>= 0.8.1)
     pg (0.21.0)
     public_suffix (3.0.1)
-    puma (3.11.2)
+    puma (4.3.8)
+      nio4r (~> 2.0)
     pure-css-rails (0.6.0)
     rack (2.0.3)
     rack-test (0.8.2)
@@ -227,7 +228,7 @@ DEPENDENCIES
   materialize-sass
   passenger (>= 5.0.25)
   pg (~> 0.20)
-  puma (~> 3.7)
+  puma (~> 4.3)
   pure-css-rails
   rails (~> 5.1.1)
   sass-rails (~> 5.0)
